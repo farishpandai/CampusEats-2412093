@@ -4,9 +4,11 @@ import CourseInfo from './CourseInfo.jsx'
 // Welcome is reused twice to show that components are reusable.
 function App() {
  return (
- <div>
-    <h1>Hello World</h1>
-</div>
- );
+ <>
+ <Welcome />
+ <CourseInfo />
+ <Welcome />
+ </>
+ )
 }
 export default App
