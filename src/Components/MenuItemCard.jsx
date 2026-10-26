@@ -1,24 +1,17 @@
-// src/components/MenuItemCard.jsx
-import { useState } from 'react'
-
-function MenuItemCard({ item, onAdd }) {
-  const [isFavorite, setIsFavorite] = useState(false)
+// src/Components/MenuItemCard.jsx
+function MenuItemCard({ item, onAdd, isFavorite, onToggleFavorite }) {
   const initial = item.name ? item.name.charAt(0) : '?'
-
-  const toggleFavorite = () => {
-    setIsFavorite((prev) => !prev)
-  }
 
   return (
     <div className="menu-item-card">
       <div className="thumb">{initial}</div>
       <span className="category-tag">{item.category}</span>
 
-      {/* Matric Digit 3 Personal Feature: Favorite toggle button */}
+      {/* Digit 3 personal feature: lifted favorite toggle */}
       <button
         type="button"
         className="fav-btn"
-        onClick={toggleFavorite}
+        onClick={() => onToggleFavorite(item.id)}
         aria-label="Toggle favourite"
       >
         {isFavorite ? '♥' : '♡'}
