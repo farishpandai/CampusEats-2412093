@@ -1,0 +1,117 @@
+[
+  {
+    "id": "2412093-kafe-ali",
+    "name": "Kafe Mahallah Ali",
+    "location": "Mahallah Ali, Block C",
+    "openHours": "7:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2412093-m1",
+        "name": "Nasi Lemak Ayam",
+        "description": "Fragrant coconut rice with fried chicken, sambal, and egg",
+        "price": 7.5,
+        "category": "Rice",
+        "available": true
+      },
+      {
+        "id": "2412093-m2",
+        "name": "Mee Goreng Mamak",
+        "description": "Stir-fried yellow noodles with tofu, egg, and spicy sauce",
+        "price": 6.0,
+        "category": "Noodles",
+        "available": true
+      },
+      {
+        "id": "2412093-m3",
+        "name": "Teh Tarik",
+        "description": "Classic pulled hot milk tea",
+        "price": 2.5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2412093-m4",
+        "name": "Nasi Ayam Penyet",
+        "description": "Smashed fried chicken with hot sambal, tofu, and tempeh",
+        "price": 9.0,
+        "category": "Rice",
+        "available": true
+      },
+      {
+        "id": "2412093-m5",
+        "name": "Kuey Teow Goreng",
+        "description": "Flat rice noodles stir-fried with dark soy sauce",
+        "price": 6.5,
+        "category": "Noodles",
+        "available": true
+      },
+      {
+        "id": "2412093-m6",
+        "name": "Milo Ais",
+        "description": "Iced chocolate malt beverage",
+        "price": 3.2,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2412093-m7",
+        "name": "Roti Canai Telur",
+        "description": "Flaky flatbread with egg served with dhal and sambal",
+        "price": 3.0,
+        "category": "Snacks",
+        "available": true
+      },
+      {
+        "id": "2412093-m8",
+        "name": "Sirap Limau",
+        "description": "Rose syrup drink infused with fresh calamansi lime",
+        "price": 2.2,
+        "category": "Drinks",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "2415666-kafe-aminah",
+    "name": "Kafe Mahallah Aminah",
+    "location": "Mahallah Aminah, Ground Floor",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2415666-m1",
+        "name": "Laksa Johor",
+        "description": "Spaghetti in rich spicy fish gravy with herbs",
+        "price": 8.0,
+        "category": "Noodles",
+        "available": true
+      },
+      {
+        "id": "2415666-m2",
+        "name": "Air Bandung",
+        "description": "Rose syrup with condensed milk",
+        "price": 3.0,
+        "category": "Drinks",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "2410233-kafe-faruq",
+    "name": "Kafe Mahallah Faruq",
+    "location": "Mahallah Faruq, Block B",
+    "openHours": "6:00 pm - 1:00 am",
+    "isOpen": false,
+    "menu": [
+      {
+        "id": "2410233-m1",
+        "name": "Burger Daging Special",
+        "description": "Beef burger patty wrapped in fried egg",
+        "price": 6.5,
+        "category": "Snacks",
+        "available": true
+      }
+    ]
+  }
+]
