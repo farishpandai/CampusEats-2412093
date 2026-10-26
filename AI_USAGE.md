@@ -33,5 +33,31 @@ Add a new section every week, before you tag. Did not use AI? Write "None" under
 - **One thing the AI got wrong and how I fixed it:**
   - When debugging an import path warning (`differing only in casing`), the AI initially assumed it was just a typo in the import string. In reality, Windows had cached the folder name as `Components` while Git and Vite expected lowercase `components`. I resolved it manually by renaming the directory via a temporary name (`components-temp` -> `components`) and reloading the VS Code developer window to clear the language server cache.
 
+  # AI Usage Log
+  
+  ## Week 3
+- **Tool(s):** 
+  Gemini
+
+- **What I asked for:**
+  - Asked for the structural template of `CheckoutForm.jsx` with controlled inputs and field-level validation rules.
+  - Asked how to lift the cart state into an array of `{ item, qty }` objects with pure derived totals using `reduce`.
+  - Asked for debugging help when the build threw a pre-transform error looking for `src/data/vendor.js` after moving mock data to `public/api/vendors.json`.
+  - Asked how to lift the Digit 3 personal feature (favourites) to `App.jsx` to filter dishes dynamically.
+
+- **What I kept, changed or rejected, and why:**
+  - **Kept:** 
+    - The `useEffect` fetch pattern with `AbortController` cleanup and reload key dependency for handling network retries.
+    - The validation logic for name length, Mahallah dropdown selection, and pickup time range (`07:00` to `22:00`).
+    - The lifted state pattern in `App.jsx` managing `favorites` as an array of IDs and a boolean filter toggle.
+  - **Changed:** 
+    - Customized `public/api/vendors.json` to feature real stalls from Mahallah Ali, Aminah, and Faruq with matching menu items, matric-prefixed IDs, and descriptions.
+    - Adjusted the header button styling to retain proper contrast and alignment against the theme header.
+  - **Rejected:** 
+    - Rejected a multi-field state pattern for the form; retained the single `values` object pattern using computed property names `[name]: value` to keep the input handlers concise.
+
+- **One thing the AI got wrong and how I fixed it:**
+  - When removing `src/data/vendor.js`, the AI initially suggested importing the JSON file directly. Because the lab requires fetching mock data asynchronously to simulate an external API, I moved the data to `public/api/vendors.json` and loaded it via native `fetch()` inside `useEffect` with proper error and loading fallbacks.
+
 
   
