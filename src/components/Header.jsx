@@ -1,25 +1,23 @@
-// src/components/Header.jsx
-function Header({ cartCount, onShowMenu, onShowCart }) {
+import { NavLink, Link } from 'react-router'
+import { useCart } from '../hooks/useCart.js'
+
+function Header() {
+  const { count, favorites } = useCart()
+
   return (
-    <header className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', background: '#005a43', color: '#fff' }}>
-      <h1 className="logo" style={{ margin: 0, cursor: 'pointer' }} onClick={onShowMenu}>CampusEats</h1>
-      <nav className="nav" style={{ display: 'flex', gap: '1rem' }}>
-        <button 
-          type="button" 
-          className="link" 
-          style={{ background: 'none', border: 'none', color: '#fff', fontSize: '1rem', cursor: 'pointer' }}
-          onClick={onShowMenu}
-        >
-          Vendors
-        </button>
-        <button 
-          type="button" 
-          className="link cart" 
-          style={{ background: 'none', border: 'none', color: '#fff', fontSize: '1rem', cursor: 'pointer' }}
-          onClick={onShowCart}
-        >
-          Cart <span className="badge" style={{ background: '#fff', color: '#005a43', padding: '2px 8px', borderRadius: '12px', fontWeight: 'bold' }}>{cartCount}</span>
-        </button>
+    <header className="header">
+      <h1 className="logo">
+        <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>CampusEats</Link>
+      </h1>
+      <nav className="nav">
+        <NavLink to="/" end>Vendors</NavLink>
+        <NavLink to="/favourites">
+          Favourites {favorites.length > 0 && <span className="badge">{favorites.length}</span>}
+        </NavLink>
+        <NavLink to="/orders">My Orders</NavLink>
+        <NavLink to="/cart" className="cart">
+          Cart <span className="badge">{count}</span>
+        </NavLink>
       </nav>
     </header>
   )

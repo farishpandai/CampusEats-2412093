@@ -1,14 +1,11 @@
-// src/components/VendorCard.jsx
-function VendorCard({ vendor, isSelected, onSelect }) {
+import { Link } from 'react-router'
+
+function VendorCard({ vendor }) {
   const initial = vendor.name ? vendor.name.charAt(0) : '?'
 
   return (
-    <button
-      type="button"
-      className={`vendor-card ${isSelected ? 'selected' : ''}`}
-      onClick={() => onSelect(vendor.id)}
-    >
-      <div className="thumb">{initial}</div>
+    <Link to={`/vendor/${vendor.id}`} className="card vendor-card">
+      <div className="thumb" aria-hidden="true">{initial}</div>
       <div className="vendor-info">
         <h3>{vendor.name}</h3>
         <p className="vendor-location">{vendor.location}</p>
@@ -17,7 +14,7 @@ function VendorCard({ vendor, isSelected, onSelect }) {
           {vendor.isOpen ? 'Open now' : 'Closed'}
         </span>
       </div>
-    </button>
+    </Link>
   )
 }
 
