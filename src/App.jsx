@@ -25,8 +25,6 @@ function App() {
   // B2: Fetch vendors with useEffect, AbortController, and cleanup
   useEffect(() => {
     const controller = new AbortController()
-    setLoading(true)
-    setError(null)
 
     fetch('/api/vendors.json', { signal: controller.signal })
       .then((res) => {
@@ -52,6 +50,12 @@ function App() {
 
     return () => controller.abort()
   }, [reloadKey])
+
+  const handleRetry = () => {
+    setLoading(true)
+    setError(null)
+    setReloadKey((k) => k + 1)
+  }
 
   // B3: Cart management handlers (immutability preserved)
   const handleAddToCart = (item) => {
@@ -114,7 +118,7 @@ function App() {
     content = (
       <ErrorMessage
         message={error}
-        onRetry={() => setReloadKey((k) => k + 1)}
+        onRetry={handleRetry}
       />
     )
   } else if (view === 'cart') {

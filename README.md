@@ -1,16 +1,21 @@
-# React + Vite
+# CampusEats (2412093)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BICS 3301 Cross-Platform Software Development — IIUM Campus Cafeteria Pre-Order App.
 
-Currently, two official plugins are available:
+## My Shop
+- **Vendor 1 (Own Shop):** Kafe Mahallah Ali (`2412093-kafe-ali`), Mahallah Ali, Block C — 8 menu items across 4 categories (Rice, Noodles, Drinks, Snacks).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Credits for Shared Vendor Data
+- Vendors 2–3 from `2415666` (Kafe Mahallah Aminah) and `2410233` (Kafe Mahallah Faruq).
 
-## React Compiler
+## Personal Feature
+- **Matric Number:** 2412093 (Last digit: **3** — Favourite items)
+- **Week 2:** Heart toggle button (`♡` / `♥`) on each `MenuItemCard`.
+- **Week 3:** Lifted `favorites` array of item IDs to `App` with a "Favourites only" filter toggle.
+- **Week 4:** Moved `favorites` into `CartContext` (persisted in `localStorage`) and added a dedicated `/favourites` page (`FavouritesPage`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally
+```bash
+npm install
+npm run dev
+```
